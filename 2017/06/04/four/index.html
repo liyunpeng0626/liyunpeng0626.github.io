@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="字符串Redis中的字符串是一个字节序列。Redis中的字符串是二进制安全的，这意味着他们的长度不由任何特殊的终止字符决定。因为，可以在一个字符串中存储高达512兆字节的任何内容。 常用操作命令有get、set等
+列表Redis列表知识字符串列表，按插入顺序排序。您可以向Redis列表的头部或尾部添">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Redis支持5种数据类型 | Li Yun Peng&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="字符串Redis中的字符串是一个字节序列。Redis中的字符串是二进制安全的，这意味着他们的长度不由任何特殊的终止字符决定。因为，可以在一个字符串中存储高达512兆字节的任何内容。 常用操作命令有get、set等 列表Redis列表知识字符串列表，按插入顺序排序。您可以向Redis列表的头部或尾部添加元素。其实list类型就是一个双向链表，通过lpush、lpop、rpush、rpop这四个命令来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis支持5种数据类型">
+<meta property="og:url" content="http://yoursite.com/2018/06/03/three/index.html">
+<meta property="og:site_name" content="Li Yun Peng&#39;s blog">
+<meta property="og:description" content="字符串Redis中的字符串是一个字节序列。Redis中的字符串是二进制安全的，这意味着他们的长度不由任何特殊的终止字符决定。因为，可以在一个字符串中存储高达512兆字节的任何内容。 常用操作命令有get、set等 列表Redis列表知识字符串列表，按插入顺序排序。您可以向Redis列表的头部或尾部添加元素。其实list类型就是一个双向链表，通过lpush、lpop、rpush、rpop这四个命令来">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-25T14:54:00.248Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Redis支持5种数据类型">
+<meta name="twitter:description" content="字符串Redis中的字符串是一个字节序列。Redis中的字符串是二进制安全的，这意味着他们的长度不由任何特殊的终止字符决定。因为，可以在一个字符串中存储高达512兆字节的任何内容。 常用操作命令有get、set等 列表Redis列表知识字符串列表，按插入顺序排序。您可以向Redis列表的头部或尾部添加元素。其实list类型就是一个双向链表，通过lpush、lpop、rpush、rpop这四个命令来">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Li Yun Peng&#39;s blog" rel="home">Li Yun Peng&#39;s blog</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/resume">Resume</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-three" class="post-three post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Redis支持5种数据类型
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2018/06/03/three/" data-id="cjxbxio0g0000e8v3191f0o3z" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p><b>字符串</b><br><br>Redis中的字符串是一个字节序列。Redis中的字符串是二进制安全的，这意味着他们的长度不由任何特殊的终止字符决定。因为，可以在一个字符串中存储高达512兆字节的任何内容。 常用操作命令有get、set等<br></p>
+<p><b>列表</b><br><br>Redis列表知识字符串列表，按插入顺序排序。您可以向Redis列表的头部或尾部添加元素。其实list类型就是一个双向链表，通过lpush、lpop、rpush、rpop这四个命令来向链表的头部插入、移除、尾部插入、移除，这使得list即可以用作栈，也可以用作队列。如下图所示的情景：<br></p>
+<p><b>散列/哈希（hash）</b><br><br>Redis散列/哈希是键值对的集合。Redis散列/哈希是字符串字段和字符串值之间的映射，但字段值只能是字符串，不支持其他类型。因此，他们用于表示对象。应用场景：存储用户的基本信息，等等、</p>
+<p><b>无序集合类型（set）</b><br></p>
+<p>redis的set是String类型的无序集合，set元素最大可以包含2的32次方-1个元素。利用set集合类型，我们可以快速取出n个key之间的并集、交集、差集等，从而轻松解决mysql等数据库不容易实现这种运算的缺陷。应用场景：取出两个QQ号中的共同的好友数。<br></p>
+<p><b>有序集合类型（sorted set）</b><br></p>
+<p>和set一样，sorted set也是string类型元素的集合，是一个没有重复元素的字符串集合。因为元素是有序的，所以使用有序集合你可以以非常快的速度（O(log(N))）添加，删除和更新元素，它也很擅长排序。应用场景：获取所有用户投票数最高的前10名，等等。<br></p>
+<p><b>小结：只有熟练掌握redis各种数据类型的特点之后，才能更好的应用到实际项目中。虽然redis的效率非常高，但是我们还是得非常清楚的理解每种数据类型适合的应用场景，这样才能将redis的优势发挥到极致</b></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2018/06/03/three/">
+    <time datetime="2018-06-03T13:06:30.000Z" class="entry-date">
+        2018-06-03
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2019/06/03/two/" rel="prev"><span class="meta-nav">←</span> 请至少列举5个PEP8规范 (越多越好</a></span>
+    
+    
+</nav><!-- .nav-single -->
